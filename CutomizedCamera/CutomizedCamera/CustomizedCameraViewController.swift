@@ -12,7 +12,6 @@ import AVFoundation
 class CustomizedCameraViewController: UIViewController {
     
     fileprivate let session = AVCaptureSession()
-    fileprivate var captureDevice: AVCaptureDevice?
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var captureButton: UIButton!
     @IBOutlet weak var clearButton: UIButton!
@@ -76,7 +75,6 @@ fileprivate extension CustomizedCameraViewController {
             successful = false
             return
         }
-        captureDevice = device
         
         // begin configuration
         session.beginConfiguration()
