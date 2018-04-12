@@ -129,6 +129,7 @@ fileprivate extension CustomizedCameraViewController {
             if device.isWhiteBalanceModeSupported(.continuousAutoWhiteBalance) {
                 device.whiteBalanceMode = .continuousAutoWhiteBalance
             }
+            device.unlockForConfiguration()
             return device
         } catch {
             print(error.localizedDescription)
